@@ -3,3 +3,33 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
+.todo-list {
+  border: 1px solid black;
+  width: max-content;
+  padding: .25rem;
+  border-radius: .5rem;
+}
+
+.todo-list__container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem;
+}
+
+.todo-list__title {
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
+}
+
+.todo-list__item {
+  cursor: pointer;
+  font-weight: 600;
+}
+.todo-list__item.dragging {
+  cursor: grabbing!important;
+  color: gray;
+  opacity: .2;
+}
