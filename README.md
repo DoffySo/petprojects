@@ -1,7 +1,7 @@
 
 ### To-Do:
-* Basic To-Do List [no]
-* Drag and Drop functionality [no]
+* Basic To-Do List [yes]
+* Drag and Drop functionality [yes]
 * Save in localStorage, JSON file [no]
 
 
