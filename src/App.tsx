@@ -25,12 +25,23 @@ function App() {
     {id: 3, name: "Test3", items: []},
   ]);
 
+  const [todoListName, setTodoListName] = useState<string | null>(null);
+
+  const handleCreateTodoList = () => {
+    if(todoListName?.trim() == null 
+    || todoListName?.trim() == undefined 
+    || todoListName?.trim() == ""
+  ) return alert("Please, enter todo list name!")
+    todoLists.push({id: todoLists.length+1, name: todoListName!, items: []})
+    setTodoListName(null)
+  }
+
   return (
     <>
       <div className="container">
         <div className="form">
-          <input className="form-input" type="text" placeholder="Todo List name..." />
-          <button className="form-submit" type="submit">Create</button>
+          <input className="form-input" onChange={e => setTodoListName(e.target.value)} type="text" placeholder="Todo List name..." />
+          <button className="form-submit" onClick={handleCreateTodoList} type="submit">Create</button>
         </div>
         <div className="todo-lists">
           {/* <TodoList id={1} name="Test" items={itemsList} />
