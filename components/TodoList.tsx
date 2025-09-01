@@ -1,7 +1,6 @@
 import TodoListItem from "@/components/TodoListItem.tsx";
 
-interface TodoListItemProps {
-    id: number;
+export type TodoListItemProps = {
     itemText: string;
     isFinished?: boolean;
 }
@@ -23,8 +22,8 @@ function TodoList({id, name, items}: TodoListProps) {
                         <TodoListItem itemText="Item 2" />
                         <TodoListItem itemText="Item 3" />
                         <TodoListItem itemText="Item 4" /> */}
-                        {items?.map(item => (
-                            <TodoListItem key={item.id} itemText={item.itemText} isFinished={item.isFinished} />
+                        {items?.map((item, idx) => (
+                            <TodoListItem key={idx} itemText={item.itemText} isFinished={item.isFinished} />
                         ))}
                     </div>
                 </div>

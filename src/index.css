@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .container {
@@ -31,6 +34,13 @@
   padding: .5rem 1rem;
   border-radius: .5rem;
   border: 1px solid black;
+  font-weight: 500;
+}
+
+.form-submit:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 .todo-lists {
@@ -52,21 +62,40 @@
 .todo-list__container {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: .25rem;
   padding: .5rem;
 }
 
 .todo-list__title {
   font-size: 1.5rem;
   border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.todo-list__items {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: .5rem;
+  padding: .25rem 0;
 }
 
 .todo-list__item {
   cursor: pointer;
   font-weight: 600;
+  height: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(151, 151, 151);
+  padding: .25rem;
+  border-radius: .25rem;
 }
 .todo-list__item.dragging {
   cursor: grabbing!important;
   color: gray;
-  opacity: .2;
+  opacity: .4;
 }
